@@ -28,7 +28,7 @@ Bundle 'SirVer/ultisnips',
 " ------------GENERAL SECTION------------"
 set t_Co=256
 filetype plugin indent on     " required!
-colorscheme nature
+
 au BufRead,BufNewFile *.logcat set filetype=logcat
 set number
 :syntax on
@@ -86,6 +86,7 @@ noremap <C-left> <Esc><C-W>h
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
+  set guifont=DejaVu\ Sans\ Mono\ 9
   set lines=45 columns=120
 endif
 
@@ -96,14 +97,14 @@ let g:ycm_confirm_extra_conf = 0
 
 " ------------Syntastic SECTION-----------------"
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_auto_loc_list=1
+let g:syntastic_cpp_checkers=['cpplint', 'ycm']
 
 "-----------PowerLine SECTION---------------"
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set encoding=utf-8
@@ -112,3 +113,6 @@ set encoding=utf-8
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+colorscheme nature
+colorscheme baycomb
