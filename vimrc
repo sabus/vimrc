@@ -116,3 +116,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 colorscheme nature
 colorscheme baycomb
+
+"-----------TAB key shortcuts
+map <C-S-left> tabNext
+map <C-S-right> tabprevious
