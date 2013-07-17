@@ -118,5 +118,7 @@ colorscheme nature
 colorscheme baycomb
 
 "-----------TAB key shortcuts
-map <C-S-left> tabNext
-map <C-S-right> tabprevious
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
